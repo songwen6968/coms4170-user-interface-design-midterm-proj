@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Songwen's Code -->
+    <title>NYC Food Explorer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(function() {
+        // Load "popular" data and display only the first 4 entries using Bootstrap grid
+        fetch('/api/popular')
+          .then(resp => resp.json())
+          .then(data => {
+              let listEl = $("#popular-list");
+              listEl.empty();
+              let count = 0;
+              data.forEach(item => {
+                  if(count < 4) {
+                      let htmlSnippet = `
+                          <div class="col-md-3 col-sm-6">
+                              <div class="popular-card">
+                                  <a href="/view/${item.id}">
+                                      <img src="${item.image}" class="img-fluid" alt="${item.title}">
+                                      <h3>${item.title}</h3>
+                                  </a>
+                                  <div class="card-details">
+                                      <div class="card-style">
+                                          ${item.style.map(s => `<span class="tag">${s}</span>`).join(' ')}
+                                      </div>
+                                      <div class="card-dishes">
+                                          ${item.popular_dishes.map(dish => `<span class="dish-button">${dish}</span>`).join(' ')}
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      `;
+                      listEl.append(htmlSnippet);
+                      count++;
+                  }
+              });
+          })
+          .catch(err => console.error("Error fetching popular:", err));
+
+        // Search form
+        $("#quick-search").submit((e) => {
+            e.preventDefault();
+            let val = $("#quick-query").val().trim();
+            if(val) {
+                window.location.href = "/search?q=" + encodeURIComponent(val);
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    {% include "nav.html" %}
+
+    <!-- Refined Conceptual Group Section -->
+    <div class="concept-group">
+        <div class="concept-content">
+            <h2>Discover the Best of NYC</h2>
+            <hr class="concept-divider">
+            <p>NYC Food Explorer connects food enthusiasts with the city's finest culinary experiences. Whether you're in search of trendy street eats or upscale dining, our curated selection helps you find the perfect spot to suit your taste and occasion.</p>
+        </div>
+        <div class="concept-image">
+            <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/new-york-city-black-white-crystal-wightman.jpg" alt="NYC Food Explorer">
+        </div>
+    </div>
+
+    <!-- Popular Entries using Bootstrap grid (4 entries) -->
+    <div class="container">
+        <div class="row" id="popular-list">
+            <!-- Four popular entries will be inserted here -->
+        </div>
+    </div>
+</body>
+</html>

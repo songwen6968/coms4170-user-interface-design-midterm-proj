@@ -1,0 +1,282 @@
+/* Global */
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav h1 a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+nav form {
+    display: flex;
+    align-items: center;
+}
+
+nav input {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+nav button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #2980b9;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #1c5980;
+}
+
+/* Headings */
+h2 {
+    margin: 40px 0 20px 0;
+    font-weight: 400;
+    color: #2c3e50;
+}
+
+/* Details Page */
+.item-details {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.item-details img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.item-details p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Restaurant description style (comment-like with a left rectangle) */
+.restaurant-description {
+    font-style: italic;
+    color: #888; /* Lighter gray */
+    position: relative;
+    padding-left: 15px;
+}
+.restaurant-description::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px; /* Very thin rectangle */
+    height: 100%;
+    background-color: #d3d3d3; /* Light-gray color */
+}
+
+/* Refined Conceptual Group Section */
+.concept-group {
+    background-color: #e0e0e0; /* Grey background */
+    margin: 30px 0;
+    padding: 30px;
+    width: 100%; /* Full width */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.concept-content {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+    min-width: 280px;
+}
+
+.concept-content h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.concept-divider {
+    border: 0;
+    border-bottom: 2px solid #2c3e50;
+    width: 100%;
+    margin: 10px 0 20px 0;
+}
+
+.concept-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+.concept-image {
+    flex: 1;
+    text-align: right;
+}
+
+.concept-image img {
+    max-width: 400px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+/* Updated Popular Card styling for smaller cards */
+.popular-card {
+    background: #fff;
+    margin: 10px;  /* Reduced margin */
+    padding: 10px;  /* Reduced padding */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.popular-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.popular-card h3 {
+    margin-top: 10px;
+    margin-bottom: 8px;  /* Added space after the title */
+    font-size: 1.2rem;
+    color: #34495e;
+}
+
+/* Ensure popular-card images adjust properly */
+.popular-card img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* Styles for popular dish buttons (light-blue) */
+.dish-button {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px 5px 5px 0;
+    border: 1px solid #34495e;
+    border-radius: 4px;
+    background-color: #add8e6; /* light-blue background */
+    font-size: 0.9rem;
+    color: #34495e;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dish-button:hover {
+    background-color: #9acbe3;
+}
+
+/* Styles for style tags (light-yellow) */
+.tag {
+    display: inline-block;
+    padding: 3px 8px;
+    margin-right: 5px;
+    background-color: #ffffe0; /* light-yellow background */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .item-details {
+        padding: 20px;
+    }
+    .concept-group {
+        flex-direction: column;
+        text-align: center;
+    }
+    .concept-content, .concept-image {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+/* Card extra details */
+.card-details {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 0.75rem; /* Smaller base font size for details */
+}
+
+.card-style, .card-dishes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    justify-content: center;
+}
+
+/* Further reduce tag and dish-button in card details */
+.card-details .tag {
+    font-size: 0.7rem;
+    padding: 2px 4px;
+}
+
+.card-details .dish-button {
+    font-size: 0.7rem;
+    padding: 2px 4px;
+}
+
+a.tag, a.dish-button {
+    text-decoration: none;
+}
+
+nav .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a.nav-add-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #2980b9;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav a.nav-add-button:hover {
+    background-color: #1c5980;
+}
+

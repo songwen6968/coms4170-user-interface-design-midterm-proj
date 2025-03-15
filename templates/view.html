@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ item.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(function() {
+        // Quick search handler
+        $("#quick-search").submit((e) => {
+            e.preventDefault();
+            let val = $("#quick-query").val().trim();
+            if(val) {
+                window.location.href = "/search?q=" + encodeURIComponent(val);
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    {% include "nav.html" %}
+    <div class="item-details">
+        <img src="{{ item.image }}" alt="{{ item.title }}">
+        <h2>{{ item.title }}</h2>
+        <p class="restaurant-description">{{ item.description }}</p>
+        <p><strong>Price Range:</strong> {{ item.price_range }}</p>
+        <p><strong>Rating:</strong> {{ item.rating }}</p>
+        <p><strong>Location:</strong> {{ item.location }}</p>
+        <p><strong>Style:</strong>
+          {% for s in item.style %}
+            <a class="tag" href="/search?q={{ s }}">{{ s }}</a>{% if not loop.last %}, {% endif %}
+          {% endfor %}
+        </p>
+        <p><strong>Popular Dishes:</strong></p>
+        <div class="popular-dishes">
+          {% for dish in item.popular_dishes %}
+            <a class="dish-button" href="/search?q={{ dish }}">{{ dish }}</a>
+          {% endfor %}
+        </div>
+        <!-- Subtle Edit link -->
+        <div class="edit-link mt-3">
+            <a href="/edit/{{ item.id }}" class="btn btn-link p-0" style="font-size: 0.9rem;">Edit</a>
+        </div>
+    </div>
+</body>
+</html>

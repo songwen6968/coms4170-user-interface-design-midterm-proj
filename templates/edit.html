@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit {{ item.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      .error { color: red; }
+      .success { color: green; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+    {% include "nav.html" %}
+    <div class="container mt-4">
+      <h2>Edit Restaurant</h2>
+      <div id="message"></div>
+      <form id="edit-form">
+          <div class="mb-3">
+              <label for="title" class="form-label">Title:</label>
+              <input type="text" id="title" name="title" class="form-control" value="{{ item.title }}" required>
+          </div>
+          <div class="mb-3">
+              <label for="image" class="form-label">Image URL:</label>
+              <input type="text" id="image" name="image" class="form-control" value="{{ item.image }}" required>
+          </div>
+          <div class="mb-3">
+              <label for="description" class="form-label">Description:</label>
+              <textarea id="description" name="description" class="form-control" required>{{ item.description }}</textarea>
+          </div>
+          <div class="mb-3">
+              <label for="price_range" class="form-label">Price Range:</label>
+              <input type="text" id="price_range" name="price_range" class="form-control" value="{{ item.price_range }}" required>
+          </div>
+          <div class="mb-3">
+              <label for="rating" class="form-label">Rating (number):</label>
+              <input type="number" step="0.1" id="rating" name="rating" class="form-control" value="{{ item.rating }}" required>
+          </div>
+          <div class="mb-3">
+              <label for="location" class="form-label">Location:</label>
+              <input type="text" id="location" name="location" class="form-control" value="{{ item.location }}" required>
+          </div>
+          <div class="mb-3">
+              <label for="style" class="form-label">Style (comma-separated):</label>
+              <input type="text" id="style" name="style" class="form-control" value="{{ item.style | join(', ') }}" required>
+          </div>
+          <div class="mb-3">
+              <label for="popular_dishes" class="form-label">Popular Dishes (comma-separated):</label>
+              <input type="text" id="popular_dishes" name="popular_dishes" class="form-control" value="{{ item.popular_dishes | join(', ') }}" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="button" id="discard" class="btn btn-secondary">Discard Changes</button>
+      </form>
+    </div>
+    
+    <script>
+      $(document).ready(function(){
+          // Quick search handler for navbar
+          $("#quick-search").on("submit", function(e){
+              e.preventDefault();
+              let q = $("#quick-query").val().trim();
+              if(q){
+                  window.location.href = "/search?q=" + encodeURIComponent(q);
+              }
+          });
+
+          // Handle form submission with Ajax for editing
+          $("#edit-form").on("submit", function(e){
+              e.preventDefault();
+              $("#message").html("");
+              
+              // Basic validation: ensure all fields are not blank
+              var valid = true;
+              $("#edit-form input, #edit-form textarea").each(function(){
+                  if($(this).val().trim() === ""){
+                      valid = false;
+                      $(this).addClass("is-invalid");
+                  } else {
+                      $(this).removeClass("is-invalid");
+                  }
+              });
+              if(!valid){
+                  $("#message").html('<div class="error">Please fill in all fields correctly.</div>');
+                  return;
+              }
+              
+              var formData = {
+                  title: $("#title").val().trim(),
+                  image: $("#image").val().trim(),
+                  description: $("#description").val().trim(),
+                  price_range: $("#price_range").val().trim(),
+                  rating: parseFloat($("#rating").val().trim()),
+                  location: $("#location").val().trim(),
+                  style: $("#style").val().split(",").map(s => s.trim()),
+                  popular_dishes: $("#popular_dishes").val().split(",").map(d => d.trim())
+              };
+              
+              $.ajax({
+                  url: "/edit/{{ item.id }}",
+                  type: "POST",
+                  contentType: "application/json",
+                  data: JSON.stringify(formData),
+                  success: function(response){
+                      window.location.href = "/view/{{ item.id }}";
+                  },
+                  error: function(xhr){
+                      $("#message").html('<div class="error">Error saving changes: ' + xhr.responseText + '</div>');
+                  }
+              });
+          });
+          
+          // Handle discard changes
+          $("#discard").on("click", function(){
+              if(confirm("Are you sure you want to discard your changes?")){
+                  window.location.href = "/view/{{ item.id }}";
+              }
+          });
+      });
+    </script>
+</body>
+</html>

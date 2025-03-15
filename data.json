@@ -1,0 +1,232 @@
+[
+    {
+        "id": 1,
+        "title": "NYC Street Tacos",
+        "image": "https://cdn.vox-cdn.com/thumbor/du2e5gCZc75OHUmOV6RSkfoxqKc=/0x0:2048x1360/1200x900/filters:focal(861x517:1187x843)/cdn.vox-cdn.com/uploads/chorus_image/image/59177581/TacoMapPanzo.35.jpg",
+        "description": "A must-visit for taco lovers, this small but vibrant taco stand in the heart of Manhattan serves up authentic Mexican street tacos. Using traditional recipes and fresh ingredients, their tacos are packed with bold flavors. The stand is famous for its homemade salsas that range from mild to extra spicy. Locals swear by their carne asada and al pastor options.",
+        "price_range": "$",
+        "popular_dishes": [
+            "Carne Asada Taco",
+            "Al Pastor Taco",
+            "Fish Taco",
+            "Fried Chicken"
+        ],
+        "rating": 4.7,
+        "location": "Manhattan, New York, NY",
+        "style": [
+            "Casual",
+            "Contemporary",
+            "Street Food"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Brooklyn BBQ House",
+        "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/e8/04/93/mable-s-smokehouse-delux.jpg?w=600&h=-1&s=1",
+        "description": "For lovers of slow-cooked, smoky, and tender meats, Brooklyn BBQ House is a paradise. This family-owned restaurant has been serving authentic Southern barbecue for over a decade. Their brisket is smoked for 14 hours, ensuring a perfect balance of tenderness and rich, smoky flavor. Sides like cornbread and mac & cheese complete the experience.",
+        "price_range": "$$",
+        "popular_dishes": [
+            "Smoked Brisket",
+            "Pulled Pork Sandwich",
+            "BBQ Ribs",
+            "Mac & Cheese"
+        ],
+        "rating": 4.8,
+        "location": "Brooklyn, New York, NY",
+        "style": [
+            "Family-friendly",
+            "Contemporary",
+            "Barbecue"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Greenwich Village Vegan Cafe",
+        "image": "https://s3-media0.fl.yelpcdn.com/bphoto/Bn94c2t7nLe6kNjp3kWI4w/348s.jpg",
+        "description": "A cozy spot for health-conscious foodies, this caf\u00e9 specializes in plant-based meals that taste as good as they look. The menu is packed with nutritious options made from organic and locally sourced ingredients. Their avocado toast and matcha lattes are crowd favorites. Whether you're vegan or just exploring plant-based eating, this caf\u00e9 won't disappoint.",
+        "price_range": "$$",
+        "popular_dishes": [
+            "Avocado Toast",
+            "Quinoa Bowl",
+            "Vegan Cheesecake",
+            "Mac & Cheese"
+        ],
+        "rating": 4.6,
+        "location": "Greenwich Village, New York, NY",
+        "style": [
+            "Healthy",
+            "Contemporary",
+            "Cozy"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Harlem Soul Food Spot",
+        "image": "https://static01.nyt.com/images/2022/11/15/t-magazine/food/15tmag-sylvias-slide-QQQC/15tmag-sylvias-slide-QQQC-superJumbo.jpg",
+        "description": "This Harlem institution has been serving classic soul food dishes for over 30 years. Their fried chicken is legendary, with a crispy golden crust and juicy interior. The restaurant also serves incredible mac & cheese and collard greens that taste just like home. If you're craving comfort food, this is the place to be.",
+        "price_range": "$$",
+        "popular_dishes": [
+            "Fried Chicken",
+            "Mac & Cheese",
+            "Collard Greens",
+            "Pulled Pork Sandwich"
+        ],
+        "rating": 4.9,
+        "location": "Harlem, New York, NY",
+        "style": [
+            "Comfort",
+            "Contemporary",
+            "Soul Food"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Midtown Sushi Lounge",
+        "image": "https://cdn-glbaf.nitrocdn.com/xuTeTeIGoVjcgbkljVFDpbvFoYFEiBjY/assets/images/optimized/rev-e7b85f8/atlantaluxury.wpenginepowered.com/wp-content/uploads/2020/10/eight-sushi-lounge-scaled.jpg",
+        "description": "A sleek and modern sushi bar in Midtown offering fresh and high-quality sushi. The chefs take great pride in sourcing the best fish available. Their omakase experience is highly recommended for those looking for a premium sushi adventure. The ambiance is stylish, making it a great spot for dates or business meetings.",
+        "price_range": "$$$",
+        "popular_dishes": [
+            "Omakase",
+            "Tuna Sashimi",
+            "Dragon Roll",
+            "Fish Taco"
+        ],
+        "rating": 4.8,
+        "location": "Midtown Manhattan, New York, NY",
+        "style": [
+            "Elegant",
+            "Contemporary",
+            "Modern"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "The Bagel Shop",
+        "image": "https://static.wixstatic.com/media/9cea11_16aaf9d312ac47a9a4c2b5789c9b7296~mv2.jpg/v1/fit/w_2500,h_1330,al_c/9cea11_16aaf9d312ac47a9a4c2b5789c9b7296~mv2.jpg",
+        "description": "No trip to New York is complete without a classic New York-style bagel, and this shop serves some of the best. Their bagels are hand-rolled and boiled before being baked to perfection. Whether you like plain, sesame, or everything bagels, they have something for you. Don't forget to try their house-made cream cheeses!",
+        "price_range": "$",
+        "popular_dishes": [
+            "Everything Bagel",
+            "Lox & Cream Cheese",
+            "Cinnamon Raisin Bagel",
+            "Avocado Toast"
+        ],
+        "rating": 3.5,
+        "location": "Lower East Side, New York, NY",
+        "style": [
+            "Traditional",
+            "Contemporary",
+            "Breakfast"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Chinatown Dim Sum Palace",
+        "image": "https://cdn.vox-cdn.com/thumbor/a4cW0Jo59wYr0097_4WARM0AcY0=/0x0:850x478/1200x800/filters:focal(392x229:528x365)/cdn.vox-cdn.com/uploads/chorus_image/image/71600675/IMG_7230.0.jpeg",
+        "description": "A beloved spot in Chinatown serving traditional dim sum in an elegant setting. Rolling carts bring freshly steamed dumplings, buns, and other Cantonese delicacies to your table. The shrimp dumplings and BBQ pork buns are among the best in the city. Perfect for a family gathering or a casual weekend brunch.",
+        "price_range": "$$",
+        "popular_dishes": [
+            "Shrimp Dumplings",
+            "BBQ Pork Buns",
+            "Turnip Cake",
+            "BBQ Ribs"
+        ],
+        "rating": 4.7,
+        "location": "Chinatown, New York, NY",
+        "style": [
+            "Authentic",
+            "Contemporary",
+            "Dim Sum"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Williamsburg Pizza Joint",
+        "image": "https://images.squarespace-cdn.com/content/v1/637530210715007320223224/8c26aa0b-9431-4843-8212-290007c4fc4b/Williamsburg+pizza+shoot+2-17.jpg",
+        "description": "A trendy Brooklyn pizzeria known for its creative toppings and thin, crispy crust. They use high-quality, locally sourced ingredients to create unique and flavorful pies. The truffle mushroom pizza is a must-try. Whether you\u2019re a classic Margherita fan or love experimenting with toppings, this place has something for everyone.",
+        "price_range": "$$",
+        "popular_dishes": [
+            "Margherita Pizza",
+            "Truffle Mushroom Pizza",
+            "Pepperoni Pizza",
+            "BBQ Ribs"
+        ],
+        "rating": 4.6,
+        "location": "Williamsburg, Brooklyn, NY",
+        "style": [
+            "Trendy",
+            "Contemporary",
+            "Italian"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "K-Town Korean BBQ",
+        "image": "https://website-cdn.menusifu.com/wp-content/uploads/ktownindy.com/2024/09/K-Town-Korean-BBQ-Hot-Pot-4.jpg",
+        "description": "An exciting dining experience in the heart of Koreatown. Customers grill their own meat right at their tables, enjoying a variety of high-quality cuts. The restaurant offers classic side dishes like kimchi, pickled radish, and rice cakes. A great place for group dining and late-night eats.",
+        "price_range": "$$$",
+        "popular_dishes": [
+            "Short Rib BBQ",
+            "Pork Belly BBQ",
+            "Bibimbap",
+            "Pulled Pork Sandwich"
+        ],
+        "rating": 4.9,
+        "location": "Koreatown, New York, NY",
+        "style": [
+            "Vibrant",
+            "Contemporary",
+            "Korean"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Chelsea Dessert Caf\u00e9",
+        "image": "https://res.cloudinary.com/the-infatuation/image/upload/f_auto/q_auto/v1712340058/NYC_CafeChelsea_PainPerdu_AlexStaniloff-1_r3nbkm.jpg",
+        "description": "A charming dessert caf\u00e9 offering a delightful selection of pastries, cakes, and specialty coffee. Their signature molten lava cake is a fan favorite, perfectly balancing a gooey center with a crispy outer layer. Whether you're a chocoholic or a fruit tart lover, there's something here to satisfy your sweet tooth.",
+        "price_range": "$$",
+        "popular_dishes": [
+            "Molten Lava Cake",
+            "Strawberry Cheesecake",
+            "Matcha Tiramisu",
+            "Vegan Cheesecake"
+        ],
+        "rating": 3.7,
+        "location": "Chelsea, New York, NY",
+        "style": [
+            "Chic",
+            "Contemporary",
+            "Dessert"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Hi",
+        "image": "www.example.com",
+        "description": "let's us eat!",
+        "price_range": "$",
+        "rating": 5.0,
+        "location": "home",
+        "style": [
+            "happy"
+        ],
+        "popular_dishes": [
+            "fish"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Hi",
+        "image": "example.com/img",
+        "description": "Let's go to eat!",
+        "price_range": "$",
+        "rating": 5.0,
+        "location": "Home",
+        "style": [
+            "Happy"
+        ],
+        "popular_dishes": [
+            "fish"
+        ]
+    }
+]
